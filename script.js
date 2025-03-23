@@ -1,13 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // 포리자판기 검색 기능
-    const searchButton = document.querySelector(".vending-machine button");
-    searchButton.addEventListener("click", function () {
-        alert("가까운 포리자판기 검색 기능은 준비 중입니다!");
-    });
+function addPost() {
+    let input = document.getElementById("postInput");
+    let postList = document.getElementById("post-list");
 
-    // 성 지식 퀴즈 정답 버튼
-    const quizButton = document.querySelector(".quiz button");
-    quizButton.addEventListener("click", function () {
-        alert("정답: 다양한 크기가 존재해요!");
-    });
-});
+    if (input.value.trim() === "") {
+        alert("내용을 입력해주세요!");
+        return;
+    }
+
+    let post = document.createElement("div");
+    post.className = "post-item";
+    post.innerText = input.value;
+    postList.prepend(post);
+
+    input.value = ""; // 입력 필드 초기화
+}

@@ -3,61 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포리 - 열린 성 지식 플랫폼</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Fori - 공식 홈페이지</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">포리</div>
+        <div class="logo">Fori</div>
         <nav>
             <ul>
-                <li><a href="#">포리 소개</a></li>
-                <li><a href="#">포리자판기</a></li>
-                <li><a href="#">성 지식</a></li>
-                <li><a href="#">커뮤니티</a></li>
-                <li><a href="#">문의하기</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#posts">게시판</a></li>
+                <li><a href="contact.html">문의하기</a></li>
+                <li><a href="login.html" class="login-btn">로그인</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="main-banner">
-        <h1>성 지식, 거리낌 없이 이야기하자!</h1>
-        <p>포리는 건강한 성 문화를 위한 열린 공간입니다.</p>
-    </section>
-
-    <section class="about">
-        <h2>포리는?</h2>
-        <p>포리는 성 지식을 쉽게 배우고, 누구나 자연스럽게 이야기할 수 있도록 돕는 프로젝트입니다.</p>
-        <img src="pory_character.png" alt="포리 캐릭터">
-    </section>
-
-    <section class="vending-machine">
-        <h2>포리자판기</h2>
-        <p>가까운 곳에서 콘돔을 쉽게 구매하세요.</p>
-        <input type="text" placeholder="지역을 입력하세요">
-        <button>검색</button>
-    </section>
-
-    <section class="knowledge">
-        <h2>성 지식 퀴즈 & 콘텐츠</h2>
-        <p>재미있는 퀴즈와 웹툰으로 성 지식을 쌓아보세요!</p>
-        <div class="quiz">
-            <p>Q. 콘돔은 몇 가지 크기가 있을까요?</p>
-            <button onclick="alert('정답: 다양한 크기가 존재해요!')">정답 보기</button>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>포리와 함께<br>새로운 경험을 만들어 보세요</h1>
+            <p>혁신적인 서비스로 더 나은 가치를 제공합니다.</p>
+        </div>
+        <div class="hero-image">
+            <img src="hero-image.jpg" alt="포리 메인 이미지">
         </div>
     </section>
 
-    <section class="sns">
-        <h2>포리 SNS</h2>
-        <div class="sns-icons">
-            <a href="#"><img src="insta.png" alt="Instagram"></a>
-            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+    <section id="about" class="rounded-box">
+        <div class="text">
+            <h2>포리란?</h2>
+            <p>포리는 사용자 중심의 서비스를 제공하는 혁신적인 플랫폼입니다.</p>
+        </div>
+        <div class="image">
+            <img src="about-image.jpg" alt="포리 소개 이미지">
         </div>
     </section>
 
-    <footer>
-        <p>© 2025 포리 프로젝트. All rights reserved.</p>
-    </footer>
+    <section id="services" class="rounded-box">
+        <div class="image">
+            <img src="services-image.jpg" alt="포리 서비스">
+        </div>
+        <div class="text">
+            <h2>우리의 서비스</h2>
+            <p>포리는 창의적이고 혁신적인 기능을 통해 사용자들에게 새로운 경험을 제공합니다.</p>
+        </div>
+    </section>
+
+    <section id="posts" class="post-section">
+        <h2>홍보 게시판</h2>
+        <div id="post-list" class="post-list"></div>
+        <div class="post-form">
+            <input type="text" id="postInput" placeholder="홍보 내용을 입력하세요">
+            <button onclick="addPost()">게시</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

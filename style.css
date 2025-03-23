@@ -1,119 +1,182 @@
-/* 기본 스타일 설정 */
-* {
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
-body {
-    background-color: #f5f5f5; /* 전체 배경 */
-    color: #333; /* 기본 글자색 */
-}
-
-/* 네비게이션 바 스타일 */
-.navbar {
-    background-color: #00274D; /* 네이비 */
+/* 헤더 */
+header {
+    background-color: #007dea;
     color: white;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h1 {
-    font-size: 24px;
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
-.navbar ul {
+nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
 }
 
-.navbar ul li {
-    display: inline;
+nav ul li {
+    margin: 0 15px;
 }
 
-.navbar ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.navbar ul li a:hover {
-    color: #FFCC00; /* 옐로우 포인트 */
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* 메인 배너 */
-.main-banner {
-    background: url('배너이미지.jpg') no-repeat center center/cover;
-    height: 400px;
+nav .login-btn {
+    background-color: #ffcd4a;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* 메인 섹션 */
+.hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    justify-content: space-between;
+    padding: 100px 50px;
+    background: #ffcd4a;
+    margin-top: 60px;
 }
 
-.main-banner h2 {
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+.hero-text {
+    width: 50%;
 }
 
-/* 콘텐츠 섹션 */
-.container {
+.hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero-image {
+    width: 50%;
+    text-align: right;
+}
+
+.hero-image img {
     width: 80%;
-    margin: auto;
-    padding: 50px 0;
+    border-radius: 15px;
 }
 
-.section-title {
-    font-size: 28px;
-    color: #00274D;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* 카드 스타일 */
-.card-container {
+/* 라운딩 박스 스타일 */
+.rounded-box {
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 90%;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    width: 50%;
+}
+
+.image {
+    width: 50%;
+    text-align: center;
+}
+
+.image img {
+    width: 80%;
+    border-radius: 15px;
+}
+
+/* 게시판 */
+.post-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.post-list {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.card {
-    background-color: white;
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 20px;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.card h3 {
-    margin: 15px 0;
-    color: #00274D;
-}
-
-.card p {
-    font-size: 14px;
-    color: #555;
-}
-
-/* 푸터 */
-.footer {
-    background-color: #00274D;
+.post-item {
+    background: #007dea;
     color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+}
+
+.post-form {
+    margin-top: 20px;
+}
+
+.post-form input {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #007dea;
+    border-radius: 5px;
+}
+
+.post-form button {
+    padding: 10px;
+    background-color: #ffcd4a;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.post-form button:hover {
+    background-color: #ffb900;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .hero, .rounded-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text, .image {
+        width: 100%;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 90%;
+    }
 }
