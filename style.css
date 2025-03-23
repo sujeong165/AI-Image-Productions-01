@@ -1,0 +1,119 @@
+/* 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5; /* 전체 배경 */
+    color: #333; /* 기본 글자색 */
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background-color: #00274D; /* 네이비 */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #FFCC00; /* 옐로우 포인트 */
+}
+
+/* 메인 배너 */
+.main-banner {
+    background: url('배너이미지.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.main-banner h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 콘텐츠 섹션 */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #00274D;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 카드 스타일 */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: #00274D;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #00274D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
