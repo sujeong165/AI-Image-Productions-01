@@ -46,3 +46,4 @@ while True:
         print_cute_ascii_art(n)
     except ValueError:
         print("숫자를 입력해주세요.")
+
